@@ -1,0 +1,11 @@
+documents: src/**/*.tsx
+schema: "graphql/*.graphql"
+generates:
+  src/types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+hooks:
+  afterStart:
+    - node test.js

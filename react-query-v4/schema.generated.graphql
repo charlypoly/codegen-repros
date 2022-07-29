@@ -1,0 +1,13 @@
+schema {
+  query: Query
+}
+
+type Query {
+  user(id: ID!): User!
+}
+
+type User {
+  email: String!
+  id: ID!
+  username: String
+}
