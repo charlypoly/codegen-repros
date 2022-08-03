@@ -1,0 +1,18 @@
+{
+  "name": "typescript-generic-sdk",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Charly POLY",
+  "license": "MIT",
+  "scripts": {
+    "codegen": "graphql-codegen --config ./codegen.yml"
+  },
+  "dependencies": {
+    "@graphql-codegen/cli": "^2.11.3",
+    "@graphql-codegen/typescript": "^2.7.2",
+    "@graphql-codegen/typescript-generic-sdk": "^2.4.2",
+    "@graphql-codegen/typescript-operations": "^2.5.2",
+    "graphql": "^16.5.0",
+    "typescript": "^4.7.4"
+  }
+}
