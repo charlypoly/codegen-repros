@@ -5,10 +5,11 @@
   "author": "Charly POLY",
   "license": "MIT",
   "scripts": {
-    "codegen": "graphql-codegen --config ./codegen.yml"
+    "codegen": "graphql-codegen --config ./codegen-default.yml",
+    "codegen-optin": "graphql-codegen --config ./codegen-optin.yml"
   },
   "dependencies": {
-    "@graphql-codegen/cli": "2.11.4-alpha-d2a18d212.0",
+    "@graphql-codegen/cli": "2.11.4-alpha-c88238a3e.0",
     "@graphql-codegen/typescript": "^2.7.2",
     "@graphql-codegen/typescript-resolvers": "latest",
     "graphql": "^16.5.0",
