@@ -1,0 +1,24 @@
+schema: "schema.graphql"
+documents: src/*.ts
+
+shared_mappers: &shared_mappers
+  ID: IDType
+
+generates:
+  resolvers-types-1.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      mappers:
+        <<: *shared_mappers
+        String: StringType
+  resolvers-types-2.ts:
+    plugins:
+      - typescript
+      - typescript-resolvers
+    config:
+      mappers:
+        <<: *shared_mappers
+        String: StringType
+
