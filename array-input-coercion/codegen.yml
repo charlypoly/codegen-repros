@@ -1,0 +1,14 @@
+schema: "schema.graphql"
+documents: src/*.tsx
+generates:
+  types.ts:
+    config:
+      avoidOptionals:
+        field: true
+      namingConvention:
+        enumValues: keep
+      nonOptionalTypename: true
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+
