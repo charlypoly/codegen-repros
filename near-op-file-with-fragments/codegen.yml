@@ -1,0 +1,24 @@
+schema: "schema.graphql"
+documents:
+  - src/*.tsx
+  - shared/*.tsx
+config: # The following configuration will adjust output to the defaults of Apollo-Codegen, and should be compatible with most use-cases.
+  preResolveTypes: true # Simplifies the generated types
+  namingConvention: keep # Keeps naming as-is
+  avoidOptionals: # Avoids optionals on the level of the field
+    field: true
+  nonOptionalTypename: true # Forces `__typename` on all selection sets
+  skipTypeNameForRoot: true # Don't generate __typename for root types
+generates:
+  ./shared/__generated__/globalTypes.ts: # Equivalent for `--globalTypesFile` flag
+    plugins:
+      - typescript # Generates based types based on your schema
+      #- typescript-compatibility # <------------------------------------- Removed `typescript-compatibility`
+  ./shared/__generated__:
+    preset: near-operation-file # Tells codegen to generate multiple files instead of one
+    presetConfig:
+      extension: ".graphql.interface.ts" # Matches the existing Apollo-Codegen file-naming
+      baseTypesPath: "./globalTypes.ts" # Points to the base types file
+    plugins:
+      - typescript-operations # Generates types based on your operations
+      #- typescript-compatibility # <------------------------------------- Removed `typescript-compatibility`
