@@ -1,0 +1,18 @@
+"Link"
+scalar URL
+
+type Query {
+    "Get a user"
+    user(id: ID!): User!
+}
+
+type User {
+    id: ID!
+    "a username is unique"
+    username: String
+    "a username is unique"
+    user_name: String @deprecated
+    email: String!
+}
+
+
