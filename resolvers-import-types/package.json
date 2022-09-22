@@ -1,0 +1,17 @@
+{
+  "name": "codegen-ts-files",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Charly POLY",
+  "license": "MIT",
+  "dependencies": {
+    "graphql": "^16.6.0"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "latest",
+    "@graphql-codegen/typescript": "latest",
+    "@graphql-codegen/typescript-resolvers": "latest",
+    "@graphql-codegen/import-types-preset": "latest",
+    "typescript": "4.8.3"
+  }
+}
