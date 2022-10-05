@@ -1,0 +1,13 @@
+{
+  "name": "client-preset-no-documents",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Charly POLY",
+  "license": "MIT",
+  "dependencies": {
+    "@graphql-codegen/cli": "^2.13.3",
+    "@graphql-codegen/client-preset": "1.0.3",
+    "graphql": "^16.6.0",
+    "typescript": "^4.8.4"
+  }
+}
