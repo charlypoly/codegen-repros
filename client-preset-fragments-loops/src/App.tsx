@@ -27,7 +27,7 @@ function App() {
       {data && (
         <ul>
           {data.allFilms?.edges?.map(
-            (e, i) => e?.node && <Film film={e?.node} key={`film-${e.node}`} />
+            (e) => e?.node && <Film film={e?.node} key={`film-${e.node.id}`} />
           )}
         </ul>
       )}
