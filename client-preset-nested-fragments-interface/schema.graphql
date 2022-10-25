@@ -1,0 +1,36 @@
+scalar Date
+
+type Query {
+    video(id: ID!): Video!
+}
+
+interface Video {
+    id: ID!
+    title: String!
+}
+
+
+type Movie implements Video {
+    id: ID!
+    title: String!
+    releaseDate: Date!
+    collection: Collection
+}
+
+type Collection {
+    id: ID!
+    title: String!
+}
+
+type Episode implements Video {
+    id: ID!
+    title: String!
+    show: Show!
+    releaseDate: Date!
+}
+
+type Show {
+    id: ID!
+    title: String!
+    releaseDate: Date!
+}
