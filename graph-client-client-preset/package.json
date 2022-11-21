@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@graphprotocol/client-cli": "^2.2.15",
+    "@graphql-codegen/cli": "^2.13.12",
+    "@graphql-codegen/client-preset": "^1.1.4",
+    "typescript": "^4.9.3"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.7.1",
+    "@graphprotocol/client-apollo": "^1.0.12",
+    "graphql": "^16.6.0"
+  }
+}
